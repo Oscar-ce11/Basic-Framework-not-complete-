@@ -1,0 +1,25 @@
+-- Services --
+local ServerStorage = game:GetService("ServerStorage")
+
+-- Modules --
+local Types = require(ServerStorage.Types)
+
+
+-- Variables --
+local Buildings = ServerStorage.Buildings
+
+-- Main --
+local Class = {}
+Class.__index = Class
+
+-- Constructor --
+local Constructor = {}
+
+function Constructor.new() : Types.BaseBuilding & typeof(Class)
+	return setmetatable({} , Class)
+end
+
+function Class:Destroy()
+end
+
+return Constructor
