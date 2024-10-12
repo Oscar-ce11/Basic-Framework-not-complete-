@@ -1,0 +1,17 @@
+local Types = {}
+
+-- Main
+export type BaseBuilding = {
+	buidlingType : "Appartment" | "Shop" | "Room";
+	buildingModel : Model;
+	buildingPos : CFrame;
+	subClass : {any}
+}
+
+-- Sub Classes
+export type Appartment = {
+	capacity : number;
+	modeltype : "Small" | "Medium" | "Large"
+}
+
+return Types
